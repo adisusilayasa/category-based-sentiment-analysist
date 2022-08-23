@@ -2,6 +2,7 @@
 
 - [Quick start](#quick-start)
 - [How it Works](#How-it-Works)
+- [Technology used](#Technology-used)
 - [Creators](#creators)
 - [Thanks](#thanks)
 
@@ -11,6 +12,11 @@ This project aimed as my thesis in my college. In this project I implement text 
 
 ## How it works
 You just need simply add any review about clothing or fashion. The application will classify your review and then implement sentiment analysist and show it on chart so you can easier understand the results.
+
+## Technology used
+- Python (flask)
+- Tensorflow
+- HTML
 
 ## Creators
 
