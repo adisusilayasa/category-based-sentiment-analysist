@@ -1,0 +1,29 @@
+<body>
+
+    <canvas id="cat_pred" width="400" height="400"></canvas>
+  
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <script>
+
+    new Chart(document.getElementById("cat_pred"), {
+         type: 'doughnut',
+          data: {
+            labels: ['Bottoms', 'Dresses', 'Tops'],
+            datasets: [{
+              label: 'Prediksi Kategory',
+              backgroundColor: 
+              ['rgba(153, 102, 255, 0.3)',
+              'rgba(54, 162, 235, 0.3)',
+              'rgba(255, 159, 64, 0.3)',
+],
+            data: {{percentage_cat | tojson}}
+            }]
+          },
+          options: {
+            title: {
+              
+              text: 'Perseentase prediksi kategori'
+            }
+          }
+        });
+  </script>

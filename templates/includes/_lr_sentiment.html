@@ -1,0 +1,49 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['line']});
+    google.charts.setOnLoadCallback(lr);
+
+  function lr() {
+
+    var data = new google.visualization.DataTable();
+    data.addColumn('number', 'Learning Rate');
+    data.addColumn('number', 'Bottoms');
+    data.addColumn('number', 'Dresses');
+    data.addColumn('number', 'Tops');
+
+    data.addRows([
+      [0.01,  76, 70, 76],
+      [0.001,  83, 79, 81],
+      [0.0001,  60,   59, 56],
+
+      
+    ]);
+
+    var options = {
+      chart: {
+        title: 'Best learning rate for each CNN Sentiment classification model'
+      },
+
+        fontSize: 12,
+      axes: {
+        x: {
+          0: {side: 'top'}
+        }
+      }
+    };
+
+    var chart = new google.charts.Line(document.getElementById('lr_sentiment'));
+
+    chart.draw(data, google.charts.Line.convertOptions(options));
+  }
+</script>
+
+
+</head>
+<body>
+  <div id="lr_sentiment" style="height: 400px; width: 500px;"></div>
+</body>
+</html>
+

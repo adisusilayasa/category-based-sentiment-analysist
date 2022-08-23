@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block title %} Tool {% endblock %}
+
+{% block body %}
+
+<div class="container">
+<br>
+<br>
+  <div class="card border-0">
+    <div class="card-body ">
+      <p class="text-center card-text">
+        Hasil prediksi
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm ">
+      <div class="card border-0">
+        <div class="card-body mx-auto ">
+          {% include 'includes/_category_predres.html' %}
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-sm ">
+      <div class="card border-0">
+        <div class="card-body mx-auto ">
+          {% include 'includes/_sentiment_predres.html' %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card border-0">
+    <div class="card-body ">
+      <p class="text-center card-text">
+        Hasil prediksi diatas menunjukkan bahwa ulasan yang dimasukkan masuk kedalam kategori <strong>{{pred_result[0]}}</strong> sedangkan untuk sentimen ulasan tersebut condong ke arah <strong>{{pred_result[1]}}</strong>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="card-header">
+      Review
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p><small class="font-italic">{{review[0]}}</small></p>
+      </blockquote>
+    </div>
+  </div>
+  <br>
+
+
+  
+</div>
+
+
+{% endblock %}

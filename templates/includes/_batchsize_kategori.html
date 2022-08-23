@@ -1,0 +1,49 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Acc');
+      data.addColumn('number', 'Multi class');
+
+      data.addRows([
+        [16,  87],
+        [32,  87.1],
+        [64,  88],
+        [128,  87.8]
+ 
+        
+      ]);
+
+      var options = {
+        chart: {
+            title: 'Best batch size for CNN Multiclass classification model'
+        },
+  
+        fontSize: 12,
+        axes: {
+          x: {
+            0: {side: 'top'}
+          }
+        }
+      };
+
+      var chart = new google.charts.Line(document.getElementById('batchsize_kategori'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  </script>
+
+
+</head>
+<body>
+  <div id="batchsize_kategori" style=" height: 300px;width: 400px;"></div>
+
+</body>
+</html>
+

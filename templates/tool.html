@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %} Tool {% endblock %}
+
+{% block body %}
+    <br>
+    <div class="d-flex justify-content-center">
+        <div style="width: 45%;" class="card d-flex justify-content-center">
+            <br>
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+                        <h3>Sentimen analisis berdasarkan kategori pakaian</h3>
+                        <hr>
+                        <form action="/" method="POST" name="data">
+
+                            <div class="form-group">
+                                <label>Masukkan Ulasan</label>
+                                <input required step="any" type="text" class="form-control" id="ulasan" name="ulasan" placeholder="Masukkan ulasan">
+                            </div>
+                            
+                            <button style="background-color: #4189c9;"  type="submit" class="btn btn-primary">Submit</button>
+
+                        </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+{% endblock %}

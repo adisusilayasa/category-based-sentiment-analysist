@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', 'Training', 'Testing'],
+          ['Klasifikasi kategori', 89, 91],
+        ]);
+
+        var options = {
+          chart: {
+            title: 'CNN on Multiclass Classification',
+            subtitle: 'Perbandingan akurasi CCN dengan parameter terbaik',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="columnchart_material" style="width: 30%; height: 400px;"></div>
+  </body>
+</html>

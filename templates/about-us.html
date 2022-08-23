@@ -1,0 +1,119 @@
+{% extends 'layout.html' %}
+
+{% block title %} About Us {% endblock %}
+
+{% block body %}
+<br>
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-body ">
+      <p class="text-center card-text">
+
+        Penelitian website ini dibangun sebagai syarat dalam memenuhi tugas akhir. Algoritma yang penulis terapkan dalam penelitian ini adalah CNN.
+        Penelitian ini ditujukan untuk mengetahui sentiment dari ulasan pada e-commerce berdasarkan kategori.
+        Data yang digunakan pada penelitian ini berjumlah 3384 data dengan 3 kategori yaitu Bottoms, Dresses, dan Tops.
+        Untuk mendapatkan model dengan performa terbaik maka dilakukan uji hyperparameter. Terdapat beberapa hyperparameter yang diuji seperti learning rate, batch size, dan epoh.
+      </p>
+      
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm ">
+      <div class="card border-0">
+        <div class="card-body mx-auto ">
+          {% include 'includes/_chart_sentiment.html' %}
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm ">
+      <div class="card border-0">
+        <div class="card-body mx-auto">          
+          {% include 'includes/_chart_category.html' %}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-body ">
+      <p class="text-center card-text">
+        Dibawah ini merupakan hasil uji coba hyperparameter yang telah dilakukan oleh penulis.
+      </p>
+      
+    </div>
+  </div>
+
+  <div class="row border-top">
+    <div class="col">
+      <div class="card border-0">
+        <div class="card-body mx-auto"> 
+          {% include 'includes/_batchsize_kategori.html' %}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-0">
+        <div class="card-body mx-auto">          
+          {% include 'includes/_lr_kategori.html' %}
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-0">
+        <div class="card-body mx-auto">   
+          {% include 'includes/_epoh_kategori.html' %}
+          
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row border-top">
+    <div class="col">
+      <div class="card border-0">
+        <div class="card-body mx-auto"> 
+          {% include 'includes/_batchsize_sentiment.html' %}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-0">
+        <div class="card-body mx-auto">          
+          {% include 'includes/_lr_sentiment.html' %}
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-0">
+        <div class="card-body mx-auto">   
+          {% include 'includes/_epoh_sentiment.html' %}
+          
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container -->
+{% endblock %}
