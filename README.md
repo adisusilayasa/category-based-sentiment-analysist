@@ -26,6 +26,6 @@ You need to install all requirement.txt then you need to extract the model from 
 
 **Creator**
 
-- <https://github.com/madeadisusilayasa>
+- <https://github.com/adisusilayasa>
 
 ## Thanks
